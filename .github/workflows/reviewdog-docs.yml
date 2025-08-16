@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: markdownlint
-        uses: reviewdog/action-markdownlint@v0.1
+        uses: reviewdog/action-markdownlint@a506383bccd0869312895b715b68a4ecd924e9f7 # v0.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
