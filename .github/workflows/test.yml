@@ -58,7 +58,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: shivammathur/setup-php@v2
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # v2
         with:
           coverage: none
           php-version: ${{ matrix.PHP_VERSION }}
@@ -156,7 +156,7 @@ jobs:
         run: mkdir -p /tmp/test; tar xCfz /tmp/test build-${{ matrix.PHP_VERSION }}/build-${{ matrix.PHP_VERSION }}.tgz thunder; rm -rf build-${{ matrix.PHP_VERSION }}
 
       - name: Setup Apache
-        uses: thunder/apache-shiva-php-action@v1
+        uses: thunder/apache-shiva-php-action@d6c7c047dce8988cf9a84b608ec8502967fb567a # v1.0.6
         with:
           php-version: ${{ matrix.PHP_VERSION }}
           site-directory: /tmp/test/thunder/install/docroot
